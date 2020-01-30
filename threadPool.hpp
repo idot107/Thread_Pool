@@ -114,7 +114,7 @@ namespace MyNamespace
 		* Constructor.
 		*/
 		ThreadPool(void)
-			:ThreadPool{max(std::thread::hardware_concurrency(), 2u) - 1u}
+			:ThreadPool{std::max(std::thread::hardware_concurrency(), 2u) - 1u}
 		{
 			/*
 			* Always create at least one thread.  If hardware_concurrency() returns 0,
