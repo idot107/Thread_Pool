@@ -115,6 +115,8 @@ namespace MyNamespace
 		*/
 		ThreadPool(void)
 			:ThreadPool{std::max(std::thread::hardware_concurrency(), 2u) - 1u}
+		//Using windows.h use the code below instead.
+		//:ThreadPool{max(std::thread::hardware_concurrency(), 2u) - 1u}
 		{
 			/*
 			* Always create at least one thread.  If hardware_concurrency() returns 0,
